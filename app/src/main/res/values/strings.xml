@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Vendor</string>
+    <string name="login_username">Username</string>
+    <string name="login_password">Password</string>
+    <string name="login_button">Login</string>
+    <string name="register_button">Register</string>
+    <string name="search_button">Search...</string>
+    <string name="category">Category</string>
+    <string name="drinks">Drinks</string>
+    <string name="admin">admin</string>
+    <string name="login_forgot_password">Did you forgot your passoword?</string>
+    <string name="search">Search</string>
+    <string name="cart">Cart</string>
+    <string name="comanda">Finalizare comanda</string>
+    <string name="LogOut">Log Out</string>
+    <string name="history">  History  </string>
+    <string name="products">Products List</string>
+    <string name="hist">Clear History</string>
+</resources>
