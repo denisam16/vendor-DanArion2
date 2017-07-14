@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.ariondan.vendor.LoginActivity">
+    tools:context="com.ariondan.vendor.activity.LoginActivity">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="56dp"
         android:background="@color/colorPrimary"
         android:elevation="4dp"
         android:focusable="true"
@@ -45,6 +45,7 @@
             android:layout_margin="4dp"
             android:hint="@string/login_password"
             android:imeOptions="actionDone"
+            android:inputType="textPassword"
             app:met_floatingLabel="highlight"
             app:met_textColorHint="@color/colorPrimary" />
 

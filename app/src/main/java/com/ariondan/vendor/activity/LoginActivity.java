@@ -1,13 +1,15 @@
-package com.ariondan.vendor;
+package com.ariondan.vendor.activity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Toast;
 
+import com.ariondan.vendor.R;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
@@ -44,8 +46,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             Toast.makeText(this, "Fill in all fields.", Toast.LENGTH_SHORT).show();
         } else {
             if (email.contains("@")) {
-                if (email.equals("adimn@gmail.com") && password.equals("parola")) {
-                    //go to store
+                if (email.equals("admin@gmail.com") && password.equals("parola")) {
+                    startActivity(new Intent(this, ProductsActivity.class));
+                    finish();
                 } else {
                     Toast.makeText(this, "Wrong e-mail or password.", Toast.LENGTH_SHORT).show();
                 }
