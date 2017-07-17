@@ -11,11 +11,13 @@ import android.widget.Toast;
 
 import com.ariondan.vendor.R;
 import com.rengwuxian.materialedittext.MaterialEditText;
+import com.ariondan.vendor.database.DatabaseManager;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     private MaterialEditText editEmail;
     private MaterialEditText editPassword;
+    private DatabaseManager database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         editPassword = (MaterialEditText) findViewById(R.id.edit_login_password);
         findViewById(R.id.button_login).setOnClickListener(this);
         findViewById(R.id.text_forget_password).setOnClickListener(this);
+        database = new DatabaseManager(this);
     }
 
     @Override
@@ -46,7 +49,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             Toast.makeText(this, "Fill in all fields.", Toast.LENGTH_SHORT).show();
         } else {
             if (email.contains("@")) {
-                if (email.equals("admin@gmail.com") && password.equals("parola")) {
+                if (database.registerUser(editEmail.getText().toString(), editPassword.getText().toString() )) {
                     startActivity(new Intent(this, ProductsActivity.class));
                     finish();
                 } else {

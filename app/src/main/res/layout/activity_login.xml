@@ -45,13 +45,11 @@
             android:layout_margin="4dp"
             android:hint="@string/login_password"
             android:imeOptions="actionDone"
-            android:inputType="textPassword"
             app:met_floatingLabel="highlight"
             app:met_textColorHint="@color/colorPrimary" />
 
         <Button
             android:id="@+id/button_login"
-            android:inputType="password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
